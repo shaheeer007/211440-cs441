@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+  		$("#btnToggle").click(function(){
+    	$("#divI,#divII,#divIII").toggle();
+  });
+});
+</script>
+
+<script>
+		$(document).ready(function(){
+  		$("#btnEnlarge").click(function(){
+    	$( "div" ).css({
+    		fontSize: "30px",
+    		color: "brown"
+});
+  });
+});
+</script>
+
+<script>
+		$(document).ready(function(){
+  		$("#btnReduce").click(function(){
+    	$( "div" ).css({
+    		fontSize: "12px",
+    		color: "red"
+});
+  });
+});
+</script>
+
+<script>
+		$(document).ready(function(){
+  		$("#btnOriginal").click(function(){
+    	$( "div" ).css({
+    		fontSize: "16px",
+    		color: "black"
+});
+  });
+});
+</script>
+		
+		<script>
+			$(document).ready(function(){
+  			$("#btnOdd").click(function(){
+    		$("tr:odd").css({"background-color": "yellow"});
+  });
+});
+		</script> 
+
+
+		<script>
+			$(document).ready(function(){
+  			$("#btnEven").click(function(){
+    		$("tr:even").css({"background-color": "orange"});
+  });
+});
+		</script> 
+
+		<script>
+			$(document).ready(function(){
+  			$("#btnI").click(function(){
+    		$("#paraI").css({"background-color": "green"});
+  });
+});
+		</script> 
+		<script>
+			$(document).ready(function(){
+  			$("#btnNth").click(function(){
+    		$("#paraV").css({"background-color": "blue"});
+  });
+});
+		</script> 
+
+
+
+
+</head>
+<body>
+
+
+	
+	<div id="divI"  style="text-align: center;">
+		<h3> Task 1 </h3>
+<p> Enter number for sum it, press 0 to exit. </p>
+
+<button onclick="TaskIFunc()">Try it</button>
+
+<p id="msg"></p>
+
+<script>
+function TaskIFunc() {
+  
+  
+  
+  var text = "";
+  var i;
+  var x = 0;
+  var num;
+  while(true){
+  	 num = prompt("Write number");
+    
+     x= parseInt(num) + x;
+    if(num == 0) break;
+}
+  	text = "Sum: " + x + "<br>";
+document.getElementById("msg").innerHTML= text;
+
+}
+</script>
+</div>
+
+
+
+
+
+<div id="divII"  style="text-align: center;">
+	<h3> Task 2 </h3>
+<p>Click and give the right answer.</p>
+
+<button onclick="myFunction()"> CLICK ME </button>
+
+<p id="demo"></p>
+
+	<script>
+	function myFunction() {
+	  var varr = prompt("Which city is capital of Pakistan?");
+	  
+
+	if (varr == "Islamabad" || varr == "islamabad") {
+
+	    alert("YES, Right answer");
+
+	} else {
+
+	    alert("Oops! -- error -- Wrong Answer");
+
+	} 
+	}
+</script>
+</div>
+
+
+<div id="divIII"  style="text-align: center;">
+
+	<h3> Task 3 </h3>
+<p> Write message: </p>
+
+<button onclick="msgFunc()">Try it</button>
+
+<p id="msgs"></p>
+
+<script>
+function msgFunc() {
+  
+  var varr = prompt("Write some message");
+  var num = prompt("times");
+  var text = "";
+  var i;
+  for(i=1; i<=num; i++){
+text += "Message: " + varr + "<br>";
+document.getElementById("msgs").innerHTML= text;
+
+
+}
+  	
+}
+</script>
+
+</div>
+<div id="divIV"  style="text-align: center;"> 
+		<h3> Task 4 </h3>
+<button id=btnToggle>Toggle</button> <br> <br>
+
+<button id = "btnEnlarge"> Enlarge the div </button> <br>
+<button id ="btnReduce">Reduce the div </button> <br>
+<button id = "btnOriginal"> Original div </button> <br>
+
+<div style="text-align: center;"> 
+  <h3> Task 5 </h3>
+<table border="1">
+
+  <tr id="paraI">
+    <td><div>
+	<h4>1st Paragraph</h4>
+A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs.
+</div></td>
+    
+  </tr>
+  <tr>
+    <td><div id="paraII">
+	<h4>2nd Paragraph</h4>
+A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs.
+</div></td>
+    
+  </tr>
+  <tr>
+    <td><div id="paraIII">
+	<h4>3rd Paragraph</h4>
+A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs.
+</div></td>
+    
+  </tr>
+  <tr  id="paraIV">
+    <td><div>
+	<h4>4th Paragraph</h4>
+A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs.
+</div></td>
+    
+  </tr>
+  <tr id="paraV">
+    <td><div>
+	<h4>5th Paragraph</h4>
+A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs.
+</div> </td>
+    
+  </tr>
+  
+</table>
+
+</div>
+
+<button id = "btnOdd"> ODD </button> <br>
+<button id = "btnEven"> EVEN </button> <br>
+<button id = "btnI"> First </button> <br>
+<button id = "btnNth"> Nth </button> <br>
+
+
+
+</body>
+</html>
